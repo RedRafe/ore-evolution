@@ -9,7 +9,7 @@ rm -r "../${folder}_${version}"
 
 rm "../${folder}.zip"
 
-zip -r "../${folder}.zip" "${folder}" -x "*/.vscode/**\*"  -x "*.git*" -x "*/\.*"
+zip -r "../${folder}.zip" "${folder}" -x "*/.vscode/**\*"  -x "*.git*" -x "*/\.*" -x "*/archive/*" -x "*/template/*"
 
 cd ..
 

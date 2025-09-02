@@ -1,13 +1,13 @@
 {
-  "name": "factorio-mod-template",
+  "name": "ore-evolution",
   "version": "0.1.0",
-  "title": "Factorio Mod Template",
-  "author": "JohnDoe",
-  "source": "https://github.com/JohnDoe/factorio-mod-template",
-  "homepage": "https://mods.factorio.com/mod/factorio-mod-template",
+  "title": "Ore Evolution",
+  "author": "RedRafe",
+  "source": "https://github.com/RedRafe/ore-evolution",
+  "homepage": "https://mods.factorio.com/mod/ore-evolution",
   "dependencies": [
-    "base >= 1.1.0"
+    "base > 2.0"
   ],
-  "description": "A ready-to-use template for Factorio mods",
-  "factorio_version": "1.1"
+  "description": "Ore hardness increases along with the Factory's production",
+  "factorio_version": "2.0"
 }

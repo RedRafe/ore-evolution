@@ -10,4 +10,3 @@ rm "../${folder}.zip"
 rm -r "../${folder}_${version}"
 
 rm "../${folder}_${version}.zip"
-
