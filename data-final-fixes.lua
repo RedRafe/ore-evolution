@@ -31,8 +31,31 @@ local function make_tier(base, index, multiplier)
     ore.tree_removal_probability = 0
     ore.cliff_removal_probability = 0
 
-    if ore.minable.mining_time then
-        ore.minable.mining_time = ore.minable.mining_time * multiplier
+    local minable = ore.minable
+    if not minable then
+        return
+    end
+
+    -- minable.mining_time = minable.mining_time * multiplier
+    if minable.result then
+        minable.results = {
+            {
+                type = 'item',
+                name = minable.result,
+                amount_min = minable.count or 1,
+                amount_max = minable.count or 1,
+                probability = math.max(0.01, 1 / multiplier)
+            }
+        }
+        minable.result = nil
+        minable.count = nil
+    else
+        for _, result in pairs(minable.results or {}) do
+            result.amount_min = result.amount_min or result.amount
+            result.amount_max = result.amount_max or result.amount
+            result.probability = result.probability or 1
+            result.probability = math.max(0.01, result.probability / multiplier)
+        end
     end
 
     data:extend({ ore })
