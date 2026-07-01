@@ -1,13 +1,13 @@
 {
   "name": "ore-evolution",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "title": "Ore Evolution",
   "author": "RedRafe",
   "source": "https://github.com/RedRafe/ore-evolution",
   "homepage": "https://mods.factorio.com/mod/ore-evolution",
   "dependencies": [
-    "base > 2.0"
+    "base >= 2.1"
   ],
   "description": "Ore hardness increases along with the Factory's production",
-  "factorio_version": "2.0"
+  "factorio_version": "2.1"
 }

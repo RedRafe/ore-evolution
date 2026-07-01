@@ -44,7 +44,7 @@ local function make_tier(base, index, multiplier)
                 name = minable.result,
                 amount_min = minable.count or 1,
                 amount_max = minable.count or 1,
-                probability = math.max(0.01, 1 / multiplier)
+                independent_probability = math.max(0.01, 1 / multiplier)
             }
         }
         minable.result = nil
@@ -53,8 +53,9 @@ local function make_tier(base, index, multiplier)
         for _, result in pairs(minable.results or {}) do
             result.amount_min = result.amount_min or result.amount
             result.amount_max = result.amount_max or result.amount
-            result.probability = result.probability or 1
-            result.probability = math.max(0.01, result.probability / multiplier)
+            result.independent_probability = result.independent_probability or result.probability or 1
+            result.probability = nil
+            result.independent_probability = math.max(0.01, result.independent_probability / multiplier)
         end
     end
 

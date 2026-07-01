@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2026-07-01
+  Changes:
+    - Fixed 'probability' on minable results renamed to 'independent_probability' (2.1 API change)
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2026-07-01
+  Changes:
+    - Bumped factorio_version to 2.1 and required base >= 2.1
+    - Updated .luacheckrc factorio_defines stds for the 2.1.0 API
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2026-02-16
   Changes:
